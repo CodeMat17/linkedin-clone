@@ -20,20 +20,24 @@ function Widgets({ newsItems }) {
         <div className='space-y-1'>
           {newsItems &&
             newsItems.map((news) => (
-              <a key={news.url} href={news.url} target="_blank">
-                  <div className='flex space-x-2 items-center cursor-pointer hover:bg-black/10 dark:hover:bg-black/20 px-2.5 py-1'>
-                    <FiberManualRecordRoundedIcon className='!h-2 !w-2' />
-                    <div>
-                      <h5 className='max-w-xs font-medium text-sm truncate pr-10'>
-                        {news.title}
-                      </h5>
-                      <TimeAgo
-                        datetime={news.publishedAt}
-                        className='text-xs mt-0.5 dark:text-white/75 opacity-80'
-                      />
-                    </div>
+              <a
+                key={news.url}
+                href={news.url}
+                target='_blank'
+                rel='noreferrer'>
+                <div className='flex space-x-2 items-center cursor-pointer hover:bg-black/10 dark:hover:bg-black/20 px-2.5 py-1'>
+                  <FiberManualRecordRoundedIcon className='!h-2 !w-2' />
+                  <div>
+                    <h5 className='max-w-xs font-medium text-sm truncate pr-10'>
+                      {news.title}
+                    </h5>
+                    <TimeAgo
+                      datetime={news.publishedAt}
+                      className='text-xs mt-0.5 dark:text-white/75 opacity-80'
+                    />
                   </div>
-                </a>
+                </div>
+              </a>
             ))}
         </div>
       </div>
