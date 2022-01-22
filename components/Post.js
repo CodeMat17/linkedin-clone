@@ -33,7 +33,7 @@ function Post({ post, modalPost }) {
   };
 
   const truncate = (string, n) =>
-    string?.length > n ? string.substr(0, n - 1) + "... see more" : string;
+    string?.length > n ? string.substr(0, n - 1) + " ...see more" : string;
 
   return (
     <div
